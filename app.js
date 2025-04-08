@@ -1,4 +1,4 @@
-const express= require("express");
+const express = require("express");
 const app = express();
 const logger = require("./winston")
 const cors = require("cors");
@@ -31,4 +31,8 @@ dbConnect();
 app.listen(PORT,()=>{
     // console.log(`Server is running on ${PORT}`);
     logger.info(`Server is running on ${PORT}`)
+})
+
+app.get('/',(req,res)=>{
+  res.send("This is backend")
 })
