@@ -3,7 +3,7 @@ const app = express();
 const logger = require("./winston")
 const cors = require("cors");
 app.use(cors({
-  origin: 'http://localhost:3000', // React app URL
+  origin: '*', // React app URL
 }))
 
 app.use(express.json())
