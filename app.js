@@ -5,7 +5,8 @@ const cors = require("cors");
 app.use(cors({
     origin: 'https://vercel-frontend-eight.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
 }))
 
 app.use(express.json())
