@@ -3,10 +3,11 @@ const app = express();
 const logger = require("./winston")
 const cors = require("cors");
 app.use(cors({
-    origin: 'https://vercel-frontend-eight.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
+  origin: '*',
+  // origin: 'https://vercel-frontend-eight.vercel.app/',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
 }))
 
 app.use(express.json())
